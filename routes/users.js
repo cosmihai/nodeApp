@@ -23,7 +23,7 @@ router.post('/', async (req, res) => {
 });
 
 //login to an existin account
-router.get('/api/login', async (req, res) => {
+router.post('/login', async (req, res) => {
   //search for error in the body of the request
   const error = validateUser(req.body);
   console.log('body',req.body)
