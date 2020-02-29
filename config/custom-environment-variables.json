@@ -1,0 +1,4 @@
+{
+  "jwtKey": "node_jwtKey",
+  "db": "greppyDB"
+}

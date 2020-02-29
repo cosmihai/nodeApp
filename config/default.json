@@ -1,0 +1,5 @@
+{
+  "appName": "nodeApp",
+  "jwtKey": "secret",
+  "db": "mongodb://localhost/greppyDB"
+}

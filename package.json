@@ -1,0 +1,29 @@
+{
+  "name": "nodeapp",
+  "version": "1.0.0",
+  "description": "short example of node backend",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cosmihai/nodeApp.git"
+  },
+  "author": "Mihai Costantea",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cosmihai/nodeApp/issues"
+  },
+  "homepage": "https://github.com/cosmihai/nodeApp#readme",
+  "dependencies": {
+    "bcrypt": "^4.0.0",
+    "config": "^3.3.0",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.2"
+  }
+}
