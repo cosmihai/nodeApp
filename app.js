@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const config = require("config");
+const userRoute = require('./routes/user');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -15,5 +16,7 @@ mongoose.connect(db, {
   })
 .then(() => console.log(`connected to ${db} ...`));
 
+app.use(express.json())
+app.use('/api/users', userRoute);
 
 app.listen(port, () => console.log(`App listening on port ${port}`));

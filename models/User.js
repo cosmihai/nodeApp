@@ -17,14 +17,14 @@ const userSchema = new mongoose.Schema({
   }
 });
 
-customerSchema.methods.generateToken = function() {
+userSchema.methods.generateToken = function() {
   return jwt.sign({_id: this._id, email: this.email}, config.get('jwtKey'));
 };
 
 function validateUser(user) {
   const schema = Joi.object({
     email: Joi.string().email().required(),
-    password: Joi.string().min(6).pattern(/(?=.*[a-z])(?=.*[A-Z])(?=.*\W)/),
+    password: Joi.string().min(6).regex(/(?=.*[a-z])(?=.*[A-Z])(?=.*\W)/).required()
   });
   const { error } = Joi.validate(user, schema);
   return error;
